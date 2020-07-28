@@ -23,6 +23,16 @@ const renderFiltersComponent = () => {
   `;
 };
 
+const renderSortComponent = () => {
+  return `
+  <ul class="sort">
+    <li><a href="#" class="sort__button sort__button--active">Sort by default</a></li>
+    <li><a href="#" class="sort__button">Sort by date</a></li>
+    <li><a href="#" class="sort__button">Sort by rating</a></li>
+  </ul>
+  `;
+};
+
 const renderComponent = (container, place = `beforeend`, template) => {
   container.insertAdjacentHTML(place, template);
 };
@@ -32,3 +42,4 @@ const siteHeaderElement = document.querySelector(`.header`);
 
 renderComponent(siteHeaderElement, `beforeend`, renderUserRankComponent());
 renderComponent(siteMainElement, `beforeend`, renderFiltersComponent());
+renderComponent(siteMainElement, `beforeend`, renderSortComponent());
