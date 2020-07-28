@@ -1,7 +1,7 @@
 # Личный проект «Киноман» [![Build status][travis-image]][travis-url]
 
 * Студент: [Денис Куряков](https://up.htmlacademy.ru/ecmascript/12/user/42634).
-* Наставник: `Неизвестно`.
+* Наставник: `Нет`.
 
 ---
 
