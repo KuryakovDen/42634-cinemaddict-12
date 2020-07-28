@@ -1,5 +1,7 @@
 'use strict';
 
+const COUNT_OF_FILM_CARDS = 5;
+
 const renderUserRankComponent = () => {
   return `
   <section class="header__profile profile">
@@ -83,11 +85,10 @@ renderComponent(siteMainElement, `beforeend`, renderSortComponent());
 renderComponent(siteMainElement, `beforeend`, renderFilmBoardComponent());
 
 const siteFilmsContainer = document.querySelector(`.films-list__container`);
-renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
-renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
-renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
-renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
-renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
+
+for (let i = 0; i < COUNT_OF_FILM_CARDS; i++) {
+  renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
+}
 
 renderComponent(siteMainElement, `beforeend`, renderShowMoreCompnent());
 
