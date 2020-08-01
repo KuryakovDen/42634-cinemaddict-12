@@ -3,22 +3,10 @@ import {renderFiltersComponent} from './view/filter.js';
 import {renderFilmBoardComponent} from './view/film-board.js';
 import {renderSortComponent} from './view/sorting.js';
 import {renderFilmCardComponent} from './view/film.js';
+import {renderShowMoreCompnent} from './view/show-more.js';
+import {renderStatisticsComponent} from './view/statistics.js';
 
 const COUNT_OF_FILM_CARDS = 5;
-
-const renderShowMoreCompnent = () => {
-  return `
-    <button class="films-list__show-more">Show more</button>
-  `;
-};
-
-const renderStatisticsComponent = () => {
-  return `
-  <section class="footer__statistics">
-    <p>130 291 movies inside</p>
-  </section>
-  `;
-};
 
 const renderComponent = (container, place = `beforeend`, template) => {
   container.insertAdjacentHTML(place, template);
