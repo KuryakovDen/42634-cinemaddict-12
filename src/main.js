@@ -1,5 +1,6 @@
 import {renderUserRankComponent} from './view/user-rank.js';
 import {renderFiltersComponent} from './view/filter.js';
+import {renderFilmBoardComponent} from './view/film-board.js';
 
 const COUNT_OF_FILM_CARDS = 5;
 
@@ -10,14 +11,6 @@ const renderSortComponent = () => {
     <li><a href="#" class="sort__button">Sort by date</a></li>
     <li><a href="#" class="sort__button">Sort by rating</a></li>
   </ul>
-  `;
-};
-
-const renderFilmBoardComponent = () => {
-  return `
-  <div class="films-list__container">
-
-  </div>
   `;
 };
 
