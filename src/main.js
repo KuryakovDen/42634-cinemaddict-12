@@ -8,7 +8,7 @@ import {renderStatisticsComponent} from './view/statistics.js';
 
 const COUNT_OF_FILM_CARDS = 5;
 
-const renderComponent = (container, place = `beforeend`, template) => {
+const renderComponent = (container, template, place = `beforeend`) => {
   container.insertAdjacentHTML(place, template);
 };
 
@@ -17,18 +17,18 @@ const siteHeaderElement = document.querySelector(`.header`);
 const siteFooterElement = document.querySelector(`.footer`);
 
 
-renderComponent(siteHeaderElement, `beforeend`, renderUserRankComponent());
-renderComponent(siteMainElement, `beforeend`, renderFiltersComponent());
-renderComponent(siteMainElement, `beforeend`, renderSortComponent());
-renderComponent(siteMainElement, `beforeend`, renderFilmBoardComponent());
+renderComponent(siteHeaderElement, renderUserRankComponent());
+renderComponent(siteMainElement, renderFiltersComponent());
+renderComponent(siteMainElement, renderSortComponent());
+renderComponent(siteMainElement, renderFilmBoardComponent());
 
 const siteFilmsContainer = siteMainElement.querySelector(`.films-list__container`);
 
 for (let i = 0; i < COUNT_OF_FILM_CARDS; i++) {
-  renderComponent(siteFilmsContainer, `beforeend`, renderFilmCardComponent());
+  renderComponent(siteFilmsContainer, renderFilmCardComponent());
 }
 
-renderComponent(siteMainElement, `beforeend`, renderShowMoreCompnent());
-renderComponent(siteFooterElement, `beforeend`, renderStatisticsComponent());
+renderComponent(siteMainElement, renderShowMoreCompnent());
+renderComponent(siteFooterElement, renderStatisticsComponent());
 
 
