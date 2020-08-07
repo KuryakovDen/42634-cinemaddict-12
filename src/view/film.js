@@ -1,4 +1,5 @@
-export {renderFilmCardComponent};
+import {posters} from '../utils/common.js';
+import {getRandomElement} from '../utils/util.js';
 
 const renderFilmCardComponent = () => {
   return `
@@ -10,7 +11,7 @@ const renderFilmCardComponent = () => {
         <span class="film-card__duration">1h 55m</span>
         <span class="film-card__genre">Musical</span>
       </p>
-      <img src="./images/posters/the-dance-of-life.jpg" alt="" class="film-card__poster">
+      <img src="./images/posters/${getRandomElement(posters)}" alt="" class="film-card__poster">
       <p class="film-card__description">Burlesque comic Ralph "Skid" Johnson (Skelly), and specialty dancer Bonny Lee King (Carroll), end up together on a cold, rainy night at a tr…</p>
       <a class="film-card__comments">5 comments</a>
       <form class="film-card__controls">
@@ -21,3 +22,5 @@ const renderFilmCardComponent = () => {
     </article>
   `;
 };
+
+export {renderFilmCardComponent};
