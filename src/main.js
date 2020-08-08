@@ -57,12 +57,24 @@ const siteFilmPopup = siteMainElement.querySelector(`.film-details`);
 siteFilmPopup.classList.add('visually-hidden');
 
 const filmPoster = siteMainElement.querySelectorAll(`.film-card__poster`);
+const filmHeader = siteMainElement.querySelectorAll(`.film-card__title`);
+const filmComments = siteMainElement.querySelectorAll(`.film-card__comments`);
 
-for (let k = 0; k < filmPoster.length; k++) {
-  filmPoster[k].addEventListener(`click`, () => {
-    siteFilmPopup.classList.remove('visually-hidden');
+const clickElements = [filmPoster, filmHeader, filmComments];
+
+const onClickFilmPopup = () => {
+  siteFilmPopup.classList.remove('visually-hidden');
+};
+
+const openFilmPopup = (elements) => {
+  elements.map((element) => {
+    for (let k = 0; k < element.length; k++) {
+      element[k].addEventListener(`click`, onClickFilmPopup);
+    }
   });
-}
+};
+
+openFilmPopup(clickElements);
 
 const popupCloseButton = siteFilmPopup.querySelector(`.film-details__close-btn`);
 
