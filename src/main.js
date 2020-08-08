@@ -8,11 +8,13 @@ import {renderShowMoreCompnent} from './view/show-more.js';
 import {renderStatisticsComponent} from './view/statistics.js';
 import {renderFilmExtraComponent} from './view/film-extra.js';
 import {generateFilm} from './mock/film.js';
+import {getUserRank} from './mock/user-rank.js';
 
 const COUNT_OF_FILM_CARDS = 5;
 const COUNT_OF_EXTRA_FILMS = 2;
 
 const films = new Array(COUNT_OF_FILM_CARDS).fill().map(generateFilm);
+const rank = getUserRank();
 
 const renderComponent = (container, template, place = `beforeend`) => {
   container.insertAdjacentHTML(place, template);
@@ -23,7 +25,7 @@ const siteHeaderElement = document.querySelector(`.header`);
 const siteFooterElement = document.querySelector(`.footer`);
 
 
-renderComponent(siteHeaderElement, renderUserRankComponent());
+renderComponent(siteHeaderElement, renderUserRankComponent(rank));
 renderComponent(siteMainElement, renderFiltersComponent());
 renderComponent(siteMainElement, renderSortComponent());
 

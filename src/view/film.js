@@ -1,10 +1,5 @@
-import {posters, films, descriptionFilms, genres} from '../utils/common.js';
-import {getRandomElement, getRandomInteger} from '../utils/util.js';
-
 const renderFilmCardComponent = (film) => {
   const {name, rating, poster, year, duration, genre, description} = film;
-
-  console.log(film);
 
   return `
     <article class="film-card">
