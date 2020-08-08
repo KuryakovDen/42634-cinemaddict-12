@@ -41,4 +41,31 @@ const posters = [
   `the-man-with-the-golden-arm.jpg`
 ];
 
-export {films, descriptionFilms, posters};
+const genres = [
+  `Comedy`,
+  `Musical`,
+  `Thriller`,
+  `Cartoon`,
+  `Horor`,
+  `Melodrama`,
+  `Documentary`,
+  `Fantastic`
+];
+
+const emotions = [
+  `angry`,
+  `puke`,
+  `sleeping`,
+  `smile`
+];
+
+const authors = [
+  `Denis`,
+  `Jerry`,
+  `Thomas`,
+  `Alyona`,
+  `Vladimir`,
+  `Adebayo`
+];
+
+export {films, descriptionFilms, posters, genres, emotions, authors};

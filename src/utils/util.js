@@ -14,4 +14,15 @@ const getRandomBoolean = () => {
   return Math.random() >= 0.5;
 };
 
-export {getRandomInteger, getRandomElement, getRandomBoolean}
+const prepareDate = (taskDate) => {
+  return taskDate.toLocaleString(`en-US`, {
+    year: `numeric`,
+    day: `numeric`,
+    month: `long`,
+    hour: `numeric`,
+    minute: `numeric`
+    }
+  );
+};
+
+export {getRandomInteger, getRandomElement, getRandomBoolean, prepareDate}

@@ -7,6 +7,7 @@ import {renderFilmCardComponent} from './view/film.js';
 import {renderShowMoreCompnent} from './view/show-more.js';
 import {renderStatisticsComponent} from './view/statistics.js';
 import {renderFilmExtraComponent} from './view/film-extra.js';
+import {generateFilm} from './mock/film.js';
 
 const COUNT_OF_FILM_CARDS = 5;
 const COUNT_OF_EXTRA_FILMS = 2;
@@ -43,3 +44,5 @@ for (let j = 0; j < COUNT_OF_EXTRA_FILMS; j++) {
 }
 
 renderComponent(siteFooterElement, renderStatisticsComponent());
+
+console.log(generateFilm());
