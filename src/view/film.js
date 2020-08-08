@@ -1,18 +1,22 @@
-import {posters, films, descriptionFilms} from '../utils/common.js';
+import {posters, films, descriptionFilms, genres} from '../utils/common.js';
 import {getRandomElement, getRandomInteger} from '../utils/util.js';
 
-const renderFilmCardComponent = () => {
+const renderFilmCardComponent = (film) => {
+  const {name, rating, poster, year, duration, genre, description} = film;
+
+  console.log(film);
+
   return `
     <article class="film-card">
-      <h3 class="film-card__title">${getRandomElement(films)}</h3>
-      <p class="film-card__rating">${getRandomInteger(1, 9)}.${getRandomInteger(1, 9)}</p>
+      <h3 class="film-card__title">${name}</h3>
+      <p class="film-card__rating">${rating}</p>
       <p class="film-card__info">
-        <span class="film-card__year">1929</span>
-        <span class="film-card__duration">1h 55m</span>
-        <span class="film-card__genre">Musical</span>
+        <span class="film-card__year">${year}</span>
+        <span class="film-card__duration">${duration}</span>
+        <span class="film-card__genre">${genre}</span>
       </p>
-      <img src="./images/posters/${getRandomElement(posters)}" alt="" class="film-card__poster">
-      <p class="film-card__description">${getRandomElement(descriptionFilms)}</p>
+      <img src="./images/posters/${poster}" alt="" class="film-card__poster">
+      <p class="film-card__description">${description}</p>
       <a class="film-card__comments">5 comments</a>
       <form class="film-card__controls">
         <button class="film-card__controls-item button film-card__controls-item--add-to-watchlist">Add to watchlist</button>

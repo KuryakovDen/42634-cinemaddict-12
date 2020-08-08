@@ -12,6 +12,8 @@ import {generateFilm} from './mock/film.js';
 const COUNT_OF_FILM_CARDS = 5;
 const COUNT_OF_EXTRA_FILMS = 2;
 
+const films = new Array(COUNT_OF_FILM_CARDS).fill().map(generateFilm);
+
 const renderComponent = (container, template, place = `beforeend`) => {
   container.insertAdjacentHTML(place, template);
 };
@@ -34,7 +36,7 @@ renderComponent(siteFilmsElement, renderFilmListComponent());
 const siteFilmsList = siteMainElement.querySelector(`.films-list__container`);
 
 for (let i = 0; i < COUNT_OF_FILM_CARDS; i++) {
-  renderComponent(siteFilmsList, renderFilmCardComponent());
+  renderComponent(siteFilmsList, renderFilmCardComponent(films[i]));
 }
 
 renderComponent(siteFilmsElement, renderShowMoreCompnent());
@@ -44,5 +46,3 @@ for (let j = 0; j < COUNT_OF_EXTRA_FILMS; j++) {
 }
 
 renderComponent(siteFooterElement, renderStatisticsComponent());
-
-console.log(generateFilm());
