@@ -10,6 +10,12 @@ const getRandomElement = (elements) => {
   return elements[randomIndex];
 };
 
+const getSomeRandomElements = (elements) => {
+  const startElement = getRandomInteger(1, 2);
+  const endElement = getRandomInteger(3, 5);
+  return elements.slice(startElement, endElement);
+};
+
 const getRandomBoolean = () => {
   return Math.random() >= 0.5;
 };
@@ -25,4 +31,10 @@ const prepareDate = (taskDate) => {
   );
 };
 
-export {getRandomInteger, getRandomElement, getRandomBoolean, prepareDate}
+export {
+  getRandomInteger,
+  getRandomElement,
+  getRandomBoolean,
+  prepareDate,
+  getSomeRandomElements
+}

@@ -1,5 +1,3 @@
-export {renderFilmPopupComponent};
-
 const renderFilmPopupComponent = () => {
   return `
     <section class="film-details">
@@ -122,3 +120,5 @@ const renderFilmPopupComponent = () => {
     </section>
   `;
 };
+
+export {renderFilmPopupComponent};

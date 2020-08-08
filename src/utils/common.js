@@ -46,11 +46,71 @@ const genres = [
   `Musical`,
   `Thriller`,
   `Cartoon`,
-  `Horor`,
+  `Horror`,
   `Melodrama`,
   `Documentary`,
   `Fantastic`
 ];
+
+const writers = [
+  `Mark Twain`,
+  `Anthony Burgess`,
+  `Lev Tolstoy`,
+  `Ernest Hemingway`,
+  `Alexandr Duma`,
+  `Francis Fitzgerald`,
+  `Sigmund Freud`,
+  `Harper Lee`,
+  `Nikolay Gogol`
+];
+
+const directors = [
+  `Steven Spielberg`,
+  `Quentin Tarantino`,
+  `James Cameron`,
+  `Martin Scorsese`,
+  `Christopher Nolan`,
+  `Nikita Mikhalkov`
+];
+
+const actors = [
+  `Gary Oldman`,
+  `Hugh Laurie`,
+  `Martin Freeman`,
+  `Christian Bale`,
+  `Benedict Cumberbatch`,
+  `Orlando Bloom`,
+  `Tom Hardy`,
+  `Liam Nison`,
+  `Anthony Hopkins`,
+  `Alexander Petrov`,
+  `Jhonny Depp`,
+  `Tim Roth`,
+  `Sean Bean`,
+  `Jason Statham`,
+  `Tom Hiddleston`,
+  `Chenning Tatum`,
+  `Jonah Hill`
+];
+
+const countries = [
+  `USA`,
+  `England`,
+  `France`,
+  `Senegal`,
+  `Russia`,
+  `Belgium`,
+  `Japan`,
+  `Ukraine`,
+  `Italy`,
+  `Germany`,
+  `Spain`,
+  `India`,
+  `Tanzania`
+];
+
+const ageRatings = [`0+`, `2+`, `4+`, `8+`, `16+`, `18+`];
+
 
 const emotions = [
   `angry`,
@@ -59,7 +119,7 @@ const emotions = [
   `smile`
 ];
 
-const authors = [
+const commentAuthors = [
   `Denis`,
   `Jerry`,
   `Thomas`,
@@ -68,4 +128,16 @@ const authors = [
   `Adebayo`
 ];
 
-export {films, descriptionFilms, posters, genres, emotions, authors};
+export {
+  films,
+  descriptionFilms,
+  posters,
+  genres,
+  emotions,
+  commentAuthors,
+  directors,
+  actors,
+  ageRatings,
+  countries,
+  writers
+};
