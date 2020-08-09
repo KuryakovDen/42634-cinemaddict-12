@@ -11,8 +11,8 @@ const getRandomElement = (elements) => {
 };
 
 const getSomeRandomElements = (elements) => {
-  const startElement = getRandomInteger(1, 2);
-  const endElement = getRandomInteger(3, 5);
+  const startElement = getRandomInteger(0, 2);
+  const endElement = getRandomInteger(3, 3);
   return elements.slice(startElement, endElement);
 };
 

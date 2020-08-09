@@ -111,7 +111,6 @@ const countries = [
 
 const ageRatings = [`0+`, `2+`, `4+`, `8+`, `16+`, `18+`];
 
-
 const emotions = [
   `angry`,
   `puke`,

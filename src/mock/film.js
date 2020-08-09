@@ -30,8 +30,7 @@ const generateComment = () => {
     emotion: getRandomElement(emotions),
     date: prepareDate(new Date()),
     author: getRandomElement(commentAuthors),
-    message: getSomeRandomElements(descriptionFilms),
-    isDeleted: false
+    message: getSomeRandomElements(descriptionFilms)
   };
 };
 
@@ -45,7 +44,7 @@ const generateFilmComments = (commentsCount) => {
   return filmComments;
 };
 
-const comments = generateFilmComments(getRandomInteger(0, 5));
+const comments = generateFilmComments(getRandomInteger(1, 5));
 
 const generateFilm = () => {
   return {
@@ -63,7 +62,7 @@ const generateFilm = () => {
     releaseDate: new Date(),
     duration: generateFilmDuration(),
     country: getRandomElement(countries),
-    genre: getSomeRandomElements(genres).join(`, `),
+    genre: getSomeRandomElements(genres),
     description: getSomeRandomElements(descriptionFilms),
     commentsCount: comments.length,
     comments

@@ -11,7 +11,7 @@ import {renderStatisticsComponent} from './view/statistics.js';
 import {generateFilm} from './mock/film.js';
 import {getUserRank} from './mock/user-rank.js';
 
-const COUNT_OF_FILM_CARDS = 5;
+const COUNT_OF_FILM_CARDS = 15;
 // const COUNT_OF_EXTRA_FILMS = 2;
 
 const films = new Array(COUNT_OF_FILM_CARDS).fill().map(generateFilm);
@@ -50,31 +50,27 @@ renderComponent(siteFilmsElement, renderShowMoreCompnent());
 
 renderComponent(siteFooterElement, renderStatisticsComponent());
 
-renderComponent(siteMainElement, renderFilmPopupComponent());
+renderComponent(siteMainElement, renderFilmPopupComponent(films[0]));
 
 const siteFilmPopup = siteMainElement.querySelector(`.film-details`);
 
-siteFilmPopup.classList.add('visually-hidden');
+// siteFilmPopup.classList.add('visually-hidden');
 
 const filmPoster = siteMainElement.querySelectorAll(`.film-card__poster`);
 const filmHeader = siteMainElement.querySelectorAll(`.film-card__title`);
 const filmComments = siteMainElement.querySelectorAll(`.film-card__comments`);
 
-const clickElements = [filmPoster, filmHeader, filmComments];
+// const clickElements = [filmPoster, filmHeader, filmComments];
 
-const onClickFilmPopup = () => {
-  siteFilmPopup.classList.remove('visually-hidden');
-};
+// const openFilmPopup = (elements) => {
+//   elements.map((element) => {
+//     for (let k = 0; k < element.length; k++) {
+//       element[k].addEventListener(`click`, onClickFilmPopup);
+//     }
+//   });
+// };
 
-const openFilmPopup = (elements) => {
-  elements.map((element) => {
-    for (let k = 0; k < element.length; k++) {
-      element[k].addEventListener(`click`, onClickFilmPopup);
-    }
-  });
-};
-
-openFilmPopup(clickElements);
+// openFilmPopup(clickElements);
 
 const popupCloseButton = siteFilmPopup.querySelector(`.film-details__close-btn`);
 
