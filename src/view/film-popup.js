@@ -1,40 +1,40 @@
 
 const renderFilmPopupComponent = (film) => {
   const {name,
-      ageRating,
-      poster,
-      rating,
-      director,
-      writers, actors,
-      releaseDate,
-      duration,
-      country,
-      description,
-      genre,
-      commentsCount,
-      comments
+    ageRating,
+    poster,
+    rating,
+    director,
+    writers, actors,
+    releaseDate,
+    duration,
+    country,
+    description,
+    genre,
+    commentsCount,
+    comments
   } = film;
 
-  const renderGenreTemplate = (genre) => {
-    const genreTemplate = genre.map((element) => {
-      return `<span class="film-details__genre">${element}</span>`
+  const renderGenreTemplate = (filmGenre) => {
+    const genreTemplate = filmGenre.map((element) => {
+      return `<span class="film-details__genre">${element}</span>`;
     });
 
     return genreTemplate;
   };
 
-  const renderGenreContainerTemplate = (genre) => {
+  const renderGenreContainerTemplate = (genres) => {
     return `
     <tr class="film-details__row">
-      <td class="film-details__term">${genre.length > 1 ? `Genres` : `Genre`} </td>
+      <td class="film-details__term">${genres.length > 1 ? `Genres` : `Genre`} </td>
       <td class="film-details__cell">
         <span class="film-details__genre">${renderGenreTemplate(genre).join(`, `)}</span>
     </tr>
     `;
   };
 
-  const renderCommentsTemplate = (comments) => {
-    const commentsTemplate = comments.map((comment) => {
+  const renderCommentsTemplate = (filmComments) => {
+    const commentsTemplate = filmComments.map((comment) => {
       const {emotion, date, author, message} = comment;
 
       return (

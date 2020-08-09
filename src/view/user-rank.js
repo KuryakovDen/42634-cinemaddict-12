@@ -1,4 +1,4 @@
-import {getUserRank} from '../mock/user-rank.js'
+import {getUserRank} from '../mock/user-rank.js';
 
 const renderUserRankComponent = (rank) => {
   rank = getUserRank();

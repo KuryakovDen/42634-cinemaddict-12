@@ -15,7 +15,7 @@ import {
 const FILM_RELEASE = {
   START: 1910,
   END: 2020
-}
+};
 
 const generateRating = () => {
   return getRandomInteger(1, 9) + getRandomInteger(1, 9) / 10;
@@ -23,7 +23,7 @@ const generateRating = () => {
 
 const generateFilmDuration = () => {
   return `${getRandomInteger(1, 3)}h ${getRandomInteger(10, 59)}m`;
-}
+};
 
 const generateComment = () => {
   return {
