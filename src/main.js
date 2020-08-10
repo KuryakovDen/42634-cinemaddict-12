@@ -25,7 +25,7 @@ const siteHeaderElement = document.querySelector(`.header`);
 const siteFooterElement = document.querySelector(`.footer`);
 
 renderComponent(siteHeaderElement, renderUserRankComponent(rank));
-renderComponent(siteMainElement, renderFiltersComponent());
+renderComponent(siteMainElement, renderFiltersComponent(films));
 renderComponent(siteMainElement, renderSortComponent());
 
 renderComponent(siteMainElement, renderFilmsComponent());
@@ -77,3 +77,5 @@ if (films.length > SHOW_FILMS_STEP) {
 
   showFilmButton.addEventListener(`click`, onClickShowMoreButton);
 }
+
+console.log(films);
