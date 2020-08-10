@@ -45,6 +45,7 @@ const generateFilmComments = (commentsCount) => {
 };
 
 const comments = generateFilmComments(getRandomInteger(1, 5));
+const description = getSomeRandomElements(descriptionFilms);
 
 const generateFilm = () => {
   return {
@@ -63,8 +64,7 @@ const generateFilm = () => {
     duration: generateFilmDuration(),
     country: getRandomElement(countries),
     genre: getSomeRandomElements(genres),
-    description: getSomeRandomElements(descriptionFilms),
-    commentsCount: comments.length,
+    description,
     comments
   };
 };
